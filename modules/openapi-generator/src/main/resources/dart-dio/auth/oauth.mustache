@@ -8,7 +8,7 @@ class OAuthInterceptor extends AuthInterceptor {
 
     @override
     Future<dynamic> onRequest(RequestOptions options) {
-        final authInfo = getAuthInfo(options, 'oauth');
+        final authInfo = getAuthInfo(options, 'oauth2');
         for (final info in authInfo) {
             final token = tokens[info['name']];
             if (token != null) {
